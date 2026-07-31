@@ -118,7 +118,9 @@ def escape_preserving_tags(text: str) -> str:
         if part.startswith("<") and part.endswith(">"):
             escaped.append(part)
         else:
-            escaped.append(html.escape(part, quote=False))
+            android_safe = re.sub(r"(?<!\\)'", r"\\'", part)
+            android_safe = re.sub(r'(?<!\\)"', r'\\"', android_safe)
+            escaped.append(html.escape(android_safe, quote=False))
     return "".join(escaped)
 
 

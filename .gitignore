@@ -1,0 +1,9 @@
+build/
+__pycache__/
+*.pyc
+*.pyo
+*.spec
+.translate-cache.json
+exe-test/
+res/
+translated/

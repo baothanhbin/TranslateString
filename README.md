@@ -26,15 +26,15 @@ Sau khi mo tool:
 
 ## Ngon ngu ho tro
 
-- Hindi: `values-hi`
-- Spanish: `values-es`
-- French: `values-fr`
-- English UK: `values-en-rGB`
-- English US: `values-en-rUS`
 - German: `values-de`
-- Indonesian: `values-in`
+- Spanish: `values-es`
+- English: `values-en`
+- French: `values-fr`
+- Hindi: `values-hi`
+- Japanese: `values-ja`
+- Korean: `values-ko`
 - Portuguese: `values-pt`
-- Chinese: `values-zh`
+- Russian: `values-ru`
 
 Tool se bo qua string co `translatable="false"` va giu lai placeholder nhu `%1$s`, `%1$d%%`, `\n`, URL, inline XML tag nhu `<u>...</u>`.
 
@@ -63,7 +63,7 @@ python .\translate_strings.py .\strings.xml -o .\res
 Dich mot vai ngon ngu:
 
 ```powershell
-python .\translate_strings.py .\strings.xml -o .\res --locales hi,es,fr
+python .\translate_strings.py .\strings.xml -o .\res --locales de,es,en
 ```
 
 Chi ro ngon ngu nguon:

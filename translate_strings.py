@@ -18,15 +18,15 @@ from typing import Callable, Iterable
 
 
 DEFAULT_LOCALES = {
-    "hi": ("Hindi", "hi", "values-hi"),
-    "es": ("Spanish", "es", "values-es"),
-    "fr": ("French", "fr", "values-fr"),
-    "en-GB": ("English (UK)", "en-GB", "values-en-rGB"),
-    "en-US": ("English (US)", "en-US", "values-en-rUS"),
     "de": ("German", "de", "values-de"),
-    "id": ("Indonesian", "id", "values-in"),
+    "es": ("Spanish", "es", "values-es"),
+    "en": ("English", "en", "values-en"),
+    "fr": ("French", "fr", "values-fr"),
+    "hi": ("Hindi", "hi", "values-hi"),
+    "ja": ("Japanese", "ja", "values-ja"),
+    "ko": ("Korean", "ko", "values-ko"),
     "pt": ("Portuguese", "pt", "values-pt"),
-    "zh": ("Chinese", "zh-CN", "values-zh"),
+    "ru": ("Russian", "ru", "values-ru"),
 }
 
 STRING_RE = re.compile(
@@ -405,7 +405,7 @@ def main() -> int:
     parser.add_argument(
         "--locales",
         default=",".join(DEFAULT_LOCALES.keys()),
-        help="Comma-separated locale list. Default: hi,es,fr,en-GB,en-US,de,id,pt,zh",
+        help=f"Comma-separated locale list. Default: {','.join(DEFAULT_LOCALES)}",
     )
     parser.add_argument(
         "--cache",
